@@ -13,7 +13,6 @@ export default function InstrumentPage() {
     }
   }, [router.query]);
 
-  console.log('🚀 ~ InstrumentPage ~ `${symbol}USD`}:', `${symbol}USD`);
   return (
     <div>
       {symbol === null ? (
