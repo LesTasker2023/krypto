@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import './styles.scss';
 
 import type Props from './types';
@@ -86,7 +87,10 @@ export const InstrumentCard = ({ coinSymbol, coinId }: Props) => {
   }, [isLoading]);
 
   return (
-    <div className={`instrument-card instrument-card--${coinId}`}>
+    <a
+      href={`/${coinSymbol}`}
+      className={`instrument-card instrument-card--${coinId}`}
+    >
       {isLoading ? (
         <div className="loader" />
       ) : data ? (
@@ -171,6 +175,6 @@ export const InstrumentCard = ({ coinSymbol, coinId }: Props) => {
           />
         </div>
       )}
-    </div>
+    </a>
   );
 };

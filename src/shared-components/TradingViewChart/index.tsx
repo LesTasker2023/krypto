@@ -13,7 +13,7 @@ export const TradingViewChart = ({ id, symbol, interval }: Props) => {
       'https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js';
     script.async = true;
     script.innerHTML = JSON.stringify({
-      symbol: 'KRAKEN:BTCUSD',
+      symbol: `KRAKEN:${symbol}`,
       interval: interval,
       autosize: true,
 

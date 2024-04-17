@@ -11,10 +11,10 @@ export const Instrument = ({ symbol }: Props) => {
     <div className="instrument-container">
       <TradingViewTicker />
       <div className="instrument">
-        <TradingViewChart id={1} symbol={'PEPE/USD'} interval={'15'} />
-        <TradingViewChart id={2} symbol={'PEPE/USD'} interval={'30'} />
-        <TradingViewChart id={3} symbol={'PEPE/USD'} interval={'60'} />
-        <TradingViewChart id={4} symbol={'PEPE/USD'} interval={'240'} />
+        <TradingViewChart id={1} symbol={symbol} interval={'15'} />
+        <TradingViewChart id={2} symbol={symbol} interval={'30'} />
+        <TradingViewChart id={3} symbol={symbol} interval={'60'} />
+        <TradingViewChart id={4} symbol={symbol} interval={'240'} />
       </div>
     </div>
   );

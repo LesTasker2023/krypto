@@ -1,5 +1,6 @@
 @use '../../styles/variables' as *;
 .instrument-card {
+  text-decoration: none;
   width: 230px;
   height: 300px;
   border-radius: 20px;
