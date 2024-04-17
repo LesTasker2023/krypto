@@ -104,15 +104,11 @@ export const InstrumentCard = ({ coinSymbol, coinId }: Props) => {
                   />
                   <span className="big-text">{change}%</span>
                   {data.change_pct > 0 ? (
-                    <img
-                      className="indicator"
-                      src={process.env.PUBLIC_URL + '/up.png'}
-                      alt="Up Icon"
-                    />
+                    <img className="indicator" src={'/up.png'} alt="Up Icon" />
                   ) : data.change_pct < 0 ? (
                     <img
                       className="indicator"
-                      src={process.env.PUBLIC_URL + '/down.png'}
+                      src={'/down.png'}
                       alt="Down Icon"
                     />
                   ) : (
@@ -170,7 +166,7 @@ export const InstrumentCard = ({ coinSymbol, coinId }: Props) => {
         <div className="instrument-card__no-data">
           <img
             className="instrument-card__no-data__image"
-            src={process.env.PUBLIC_URL + '/no-data.webp'}
+            src={'/no-data.webp'}
             alt=""
           />
         </div>

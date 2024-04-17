@@ -11,6 +11,7 @@ export const InstrumentList = ({ instruments }: Props) => {
       {instruments?.map((instrument) => {
         return (
           <InstrumentCard
+            key={instrument.id}
             coinSymbol={instrument.symbol}
             coinId={instrument.id}
           />
