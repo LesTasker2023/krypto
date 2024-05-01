@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
+import './styles.scss';
 
 interface Props {
   id: number;
   symbol: string;
-  interval: string;
+  interval: number;
 }
 
 export const TradingViewChart = ({ id, symbol, interval }: Props) => {
@@ -14,7 +15,7 @@ export const TradingViewChart = ({ id, symbol, interval }: Props) => {
     script.async = true;
     script.innerHTML = JSON.stringify({
       symbol: `KRAKEN:${symbol}`,
-      interval: interval,
+      interval: `${(interval * 60).toString()}`,
       autosize: true,
 
       timezone: 'Etc/UTC',
@@ -28,7 +29,7 @@ export const TradingViewChart = ({ id, symbol, interval }: Props) => {
       calendar: false,
       hide_side_toolbar: false,
 
-      studies: ['STD;EMA'],
+      studies: ['STD;TEMA'],
     });
     const chart = document.querySelector(
       `.tradingview-widget-container__widget--${id}`
@@ -44,7 +45,7 @@ export const TradingViewChart = ({ id, symbol, interval }: Props) => {
 
   return (
     <div
-      className={`tradingview-widget-container__widget tradingview-widget-container__widget--${id}`}
+      className={`tradingview-widget-container__widget tradingview-widget-container__widget--${id} widget-wrapper widget-wrapper--${id}`}
     />
   );
 };

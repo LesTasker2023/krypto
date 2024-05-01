@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard {
+  padding: 24px;
+  background-color: #c7c7c7;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow: hidden;
+}
+.dashboard__coin-data {
+  display: flex;
+}
+.dashboard__coin-data__toggle {
+  font-size: 24px;
+  color: red;
+  margin-left: auto;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+}
+.dashboard__favourites {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.js-copyright-label {
+  display: none;
+}
+
+.tradingview-widget-container {
+  margin: auto;
+}/*# sourceMappingURL=styles.css.map */

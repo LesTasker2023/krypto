@@ -4,9 +4,9 @@
   gap: 24px;
   padding: 24px;
 }
+
 .instrument-container {
   display: flex;
   flex-direction: column;
-
   background-color: #000;
-}
+}/*# sourceMappingURL=styles.css.map */
