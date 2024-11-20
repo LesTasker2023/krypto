@@ -1,6 +1,7 @@
 .instrument {
   display: grid;
   grid-template-columns: repeat(2, auto);
+  height: 100vh;
   gap: 24px;
   padding: 24px;
 }
