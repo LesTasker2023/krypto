@@ -5,6 +5,7 @@ import React from "react";
 import type Props from "./types";
 import { TradingViewChart } from "../../shared-components/TradingViewChart";
 import { TradingViewTicker } from "../../shared-components/TradingViewTicker";
+import TimeSaleList from "@/components/TimeSaleList";
 
 export const Instrument = ({ symbol }: Props) => {
   return (
@@ -16,6 +17,7 @@ export const Instrument = ({ symbol }: Props) => {
         <TradingViewChart id={3} symbol={symbol} interval={1} />
         <TradingViewChart id={4} symbol={symbol} interval={24} />
       </div>
+      <TimeSaleList />
     </div>
   );
 };
